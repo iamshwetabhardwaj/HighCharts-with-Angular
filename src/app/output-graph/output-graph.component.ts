@@ -138,7 +138,7 @@ export class OutputGraphComponent implements OnInit {
 
 
   getApiResponse(url) {
-    return this.http.get(url, {})
+    return this.http.get<any[]>(url, {})
       .toPromise().then(res => {
         return res;
       });
